@@ -1,0 +1,60 @@
+{
+    "Frontend": [
+        {
+            "name": "HTML5 / CSS3",
+            "proficiency": "90%"
+        },
+        {
+            "name": "React",
+            "proficiency": "80%"
+        },
+        {
+            "name": "Tailwind CSS",
+            "proficiency": "80%"
+        },
+        {
+            "name": "Bootstrap",
+            "proficiency": "85%"
+        }
+    ],
+    "Backend": [
+        {
+            "name": "Node.js",
+            "proficiency": "80%"
+        },
+        {
+            "name": "Express.js",
+            "proficiency": "80%"
+        }
+    ],
+    "Database": [
+        {
+            "name": "MongoDB",
+            "proficiency": "75%"
+        },
+        {
+            "name": "SQL",
+            "proficiency": "80%"
+        }
+    ],
+    "Data Analytics": [
+        {
+            "name": "SQL (Data Analysis)",
+            "proficiency": "80%"
+        },
+        {
+            "name": "MongoDB (Data Insights)",
+            "proficiency": "75%"
+        }
+    ],
+    "Developer Tools": [
+        {
+            "name": "Git / GitHub",
+            "proficiency": "85%"
+        },
+        {
+            "name": "VS Code",
+            "proficiency": "90%"
+        }
+    ]
+}

@@ -1,0 +1,1415 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kachara Arman — Full Stack Developer</title>
+    <meta name="description"
+        content="Kachara Arman — Full Stack Developer specializing in React, Node.js, Express.js, MongoDB, SQL, and Cybersecurity. BCA student from Gujarat, India.">
+    <meta name="keywords"
+        content="Kachara Arman, Full Stack Developer, React, Node.js, Express.js, MongoDB, Cybersecurity, Gujarat, India, Portfolio">
+    <meta name="author" content="Kachara Arman">
+    <meta property="og:title" content="Kachara Arman — Full Stack Developer Portfolio">
+    <meta property="og:description" content="Building clean, scalable &amp; intelligent full stack digital solutions.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Urdu / Arabic script font (used when language = Urdu) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ai-agent-widget.css">
+</head>
+
+<body>
+
+    <!-- ── Page Loader ─────────────────────────────────────── -->
+    <div id="pageLoader">
+        <div class="loader-inner">
+            <div class="loader-logo">
+                <span class="loader-initials">AK</span>
+                <div class="loader-ring"></div>
+                <div class="loader-ring loader-ring-2"></div>
+            </div>
+            <div class="loader-name">Kachara Arman</div>
+            <div class="loader-role">Full Stack Developer</div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar-track">
+                    <div class="loader-bar-fill" id="loaderBarFill"></div>
+                </div>
+                <span class="loader-percent" id="loaderPercent">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="sweep-light"></div>
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+        <div class="ambient-orb orb-4"></div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Mouse Glow -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+
+
+    <!-- ═══════════════════════════════════════
+             NAVBAR
+        ═══════════════════════════════════════ -->
+    <header class="nav-header" id="navHeader">
+        <nav class="navbar-pill" role="navigation" aria-label="Main navigation">
+            <div class="nav-logo">
+                <span class="nav-logo-icon">⟨/⟩</span>
+                <span class="nav-logo-text">Arman</span>
+            </div>
+
+            <ul class="nav-links" id="navLinks" role="list">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="#certificates" class="nav-link" data-section="certificates">Certificates</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="fc-btn fc-lang-btn" id="fcLangBtn" type="button" aria-label="Switch language"
+                    title="Switch language" data-i18n-aria="Switch language" data-i18n-title="Switch language" data-lang="ur">
+                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    <span class="fc-lang-text" id="fcLangText">اردو</span>
+                </button>
+                <button class="recruiter-mode-btn btn-liquid" id="recruiterModeBtn" aria-label="Toggle Recruiter Mode">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Recruiter Mode</span>
+                </button>
+                <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Scroll Progress Bar -->
+        <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <div class="mobile-drawer-inner">
+            <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <ul class="mobile-nav-list" role="list">
+                <li><a href="#home" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about" class="mobile-nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+                <li><a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+                </li>
+                <li><a href="#experience" class="mobile-nav-link"><i class="fa-solid fa-timeline"></i>
+                        Experience</a></li>
+                <li><a href="#education" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i>
+                        Education</a></li>
+                <li><a href="#certificates" class="mobile-nav-link"><i class="fa-solid fa-award"></i>
+                        Certificates</a></li>
+                <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-social-links">
+                <a href="https://github.com/kachraarman044" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/arman-kachra-921a9a39b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:kachraarman83@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+             HERO SECTION
+        ═══════════════════════════════════════ -->
+    <section id="home" class="hero-section">
+        <div class="hero-grid">
+
+            <!-- LEFT: Text Content -->
+            <div class="hero-content">
+                <div class="hero-badge reveal-fade" style="--delay:0.1s">
+                    <span class="badge-dot"></span>
+                    OPEN TO OPPORTUNITIES
+                </div>
+
+                <h1 class="hero-title reveal-fade" style="--delay:0.2s">
+                    <span class="gradient-name">Kachara Arman</span>
+                </h1>
+
+                <p class="hero-headline reveal-fade" style="--delay:0.3s" data-i18n-html="heroHeadline">
+                    Building the Future with <em>Full-Stack Code</em> &amp; AI Intelligence
+                </p>
+
+                <p class="hero-bio reveal-fade" style="--delay:0.4s">
+                    BCA Student &bull; Full Stack Developer &bull; Gujarat, India
+                </p>
+
+                <p class="hero-bio reveal-fade" style="--delay:0.45s">
+                    I am Kachara Arman, a highly motivated developer with a singular focus: crafting scalable
+                    web applications and integrating advanced machine learning &amp; AI solutions. With a perfect
+                    academic record and real-world project experience, I am ready to make an immediate impact.
+                </p>
+
+                <div class="hero-actions reveal-fade" style="--delay:0.5s">
+                    <a href="#projects" class="btn-primary-pill">
+                        <i class="fa-solid fa-rocket"></i>
+                        View My Projects
+                    </a>
+                    <a href="resume/arman resume.pdf" class="btn-glass-pill" download>
+                        <i class="fa-solid fa-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+
+                <div class="hero-social reveal-fade" style="--delay:0.6s">
+                    <a href="https://github.com/kachraarman044" target="_blank" class="social-btn" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/arman-kachra-921a9a39b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-btn"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:kachraarman83@gmail.com" class="social-btn" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/918849595114" target="_blank" class="social-btn" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Visual -->
+            <div class="hero-visual reveal-fade" style="--delay:0.3s">
+                <div class="hero-visual-container">
+                    <!-- Glow ring behind image -->
+                    <div class="hero-glow-ring"></div>
+
+                    <!-- Profile image -->
+                    <div class="hero-image-wrap">
+                        <img src="images/arman.png" alt="Kachara Arman - Full Stack Developer" class="hero-profile-img"
+                            loading="lazy">
+                    </div>
+
+                    <!-- Floating tech badges -->
+                    <div class="floating-badge badge-python" aria-hidden="true">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React" width="28" height="28">
+                        <span>React.js</span>
+                    </div>
+
+                    <div class="floating-badge badge-django" aria-hidden="true">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js" width="22" height="22">
+                        <span>Node.js</span>
+                    </div>
+
+                    <div class="floating-badge badge-flask" aria-hidden="true">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                            alt="MongoDB" width="20" height="20">
+                        <span>MongoDB</span>
+                    </div>
+
+                    <div class="floating-badge badge-fastapi" aria-hidden="true">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                            alt="Git" width="20" height="20">
+                        <span>Git</span>
+                    </div>
+
+                    <div class="floating-badge badge-sql" aria-hidden="true">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                            alt="Tailwind CSS" width="20" height="20">
+                        <span>Tailwind CSS</span>
+                    </div>
+
+                    <div class="floating-badge badge-git" aria-hidden="true">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                            alt="Express.js" width="20" height="20"
+                            style="filter:invert(1)">
+                        <span>Express.js</span>
+                    </div>
+
+                    <div class="floating-badge badge-api" aria-hidden="true">
+                        <i class="fa-solid fa-plug" style="color:#3776AB;font-size:15px"></i>
+                        <span>REST API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero bottom info cards -->
+        <div class="hero-info-cards reveal-fade" style="--delay:0.7s">
+            <div class="hero-info-box">
+                <div class="hero-info-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                <div class="hero-info-text">
+                    <span class="hero-info-label">DOB</span>
+                    <span class="hero-info-value">25 Sept 2006</span>
+                </div>
+            </div>
+            <div class="hero-info-box">
+                <div class="hero-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="hero-info-text">
+                    <span class="hero-info-label">Location</span>
+                    <span class="hero-info-value">Gujarat, India</span>
+                </div>
+            </div>
+            <div class="hero-info-box">
+                <div class="hero-info-icon"><i class="fa-solid fa-clapperboard"></i></div>
+                <div class="hero-info-text">
+                    <span class="hero-info-label">Hobbies</span>
+                    <span class="hero-info-value">Watching Movie, Traveling, Web Exploring</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+             ABOUT SECTION
+        ═══════════════════════════════════════ -->
+    <section id="about" class="section about-section">
+        <div class="section-eyebrow reveal-up">About Me</div>
+        <h2 class="section-title reveal-up" data-i18n-html="aboutTitle">Passionate Full Stack Developer <span
+                class="title-accent">from
+                India</span>
+        </h2>
+
+        <div class="about-grid">
+            <!-- Left: Bio -->
+            <div class="about-bio reveal-up" style="--delay:0.1s">
+                <p data-i18n-html="aboutP1">
+                    I'm <strong>Kachara Arman</strong>, a BCA undergraduate at <strong>Noble University,
+                        Junagadh</strong>. I specialize in
+                    full stack development with a strong focus on <strong>React, Node.js, REST APIs, and backend
+                        architecture</strong>.
+                </p>
+                <p data-i18n-html="aboutP2">
+                    My project experience includes a <strong>Face Recognition Door Security System</strong>, a
+                    <strong>Journey to India</strong> platform, a
+                    <strong>Hotel Management Website</strong>, and a <strong>Gaming website</strong> — each built
+                    end to end,
+                    from user interface to backend logic.
+                </p>
+                <p data-i18n-html="aboutP3">
+                    I'm passionate about <strong>turning ideas into working software</strong>. I care about clean,
+                    maintainable code,
+                    thoughtful architecture, and building applications that people can genuinely rely on.
+                </p>
+                <p data-i18n-html="aboutP4">
+                    Currently pursuing my BCA, I'm looking for opportunities to <strong>apply my skills, work on
+                        real-world products,
+                        and grow as a full stack developer</strong>.
+                </p>
+                <div class="about-cta">
+                    <a href="#contact" class="btn-primary-pill">
+                        <i class="fa-solid fa-paper-plane"></i> Get in Touch
+                    </a>
+                    <a href="resume/arman resume.pdf" class="btn-glass-pill" download>
+                        <i class="fa-solid fa-file-pdf"></i> Resume
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Info cards -->
+            <div class="about-cards reveal-up" style="--delay:0.2s">
+                <div class="about-info-card glass-card">
+                    <div class="info-card-icon" style="--icon-color:#3776AB"><i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <div class="info-card-label">Education</div>
+                        <div class="info-card-value">BCA</div>
+                        <div class="info-card-sub">Noble University, 2023–2026</div>
+                    </div>
+                </div>
+
+                <div class="about-info-card glass-card">
+                    <div class="info-card-icon" style="--icon-color:#FFD43B"><i class="fa-solid fa-code"></i></div>
+                    <div>
+                        <div class="info-card-label">Role</div>
+                        <div class="info-card-value">Full Stack Developer</div>
+                        <div class="info-card-sub">React · Node.js · REST</div>
+                    </div>
+                </div>
+
+                <div class="about-info-card glass-card">
+                    <div class="info-card-icon" style="--icon-color:#3776AB"><i class="fa-solid fa-crosshairs"></i>
+                    </div>
+                    <div>
+                        <div class="info-card-label">Current Focus</div>
+                        <div class="info-card-value">REST APIs · Cyber Security</div>
+                        <div class="info-card-sub">AI/ML with Python · Node.js</div>
+                    </div>
+                </div>
+
+                <div class="about-info-card glass-card">
+                    <div class="info-card-icon" style="--icon-color:#4CAF50"><i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <div class="info-card-label">Mindset</div>
+                        <div class="info-card-value">Problem Solving</div>
+                        <div class="info-card-sub">Clean code · Continuous learning</div>
+                    </div>
+                </div>
+
+                <!-- Profile quick-info -->
+                <div class="about-profile-card glass-card full-width">
+                    <ul class="profile-kv-list">
+                        <li><span class="kv-key"><i class="fa-solid fa-user"></i> Name</span><span
+                                class="kv-val">Kachara Arman</span></li>
+                        <li><span class="kv-key"><i class="fa-solid fa-location-dot"></i> Location</span><span
+                                class="kv-val">Gujarat, India</span></li>
+                        <li><span class="kv-key"><i class="fa-solid fa-envelope"></i> Email</span><a
+                                href="mailto:kachraarman83@gmail.com"
+                                class="kv-val kv-link">kachraarman83@gmail.com</a></li>
+                        <li><span class="kv-key"><i class="fa-brands fa-github"></i> GitHub</span><a
+                                href="https://github.com/kachraarman044" target="_blank" class="kv-val kv-link">@kachraarman044</a>
+                        </li>
+                        <li><span class="kv-key"><i class="fa-brands fa-linkedin"></i> LinkedIn</span><a
+                                href="https://www.linkedin.com/in/arman-kachra-921a9a39b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"
+                                class="kv-val kv-link">Arman</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+             SKILLS SECTION — React Galaxy
+        ═══════════════════════════════════════ -->
+    <section id="skills" class="section skills-section">
+        <div class="section-eyebrow reveal-up">Technical Expertise</div>
+        <h2 class="section-title reveal-up">React <span class="title-accent">Skills Galaxy</span></h2>
+        <p class="section-subtitle reveal-up">Hover over any technology to explore my proficiency</p>
+
+        <!-- Galaxy orbit visualization -->
+        <div class="skills-galaxy reveal-up" id="skillsGalaxy">
+            <!-- Center nucleus -->
+            <div class="galaxy-center">
+                <div class="galaxy-nucleus">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+                        width="52" height="52">
+                    <span>REACT</span>
+                </div>
+                <!-- Orbit rings (decorative) -->
+                <div class="orbit-ring orbit-ring-1"></div>
+                <div class="orbit-ring orbit-ring-2"></div>
+                <div class="orbit-ring orbit-ring-3"></div>
+            </div>
+
+            <!-- Orbit nodes -->
+            <div class="skill-node sn-1" data-skill="HTML" data-level="85%" data-desc="Web structure & semantics">
+                <div class="node-inner">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"
+                        width="28" height="28">
+                    <span>HTML</span>
+                </div>
+                <div class="node-tooltip">HTML — 85% · Web Markup</div>
+            </div>
+
+            <div class="skill-node sn-2" data-skill="CSS" data-level="85%" data-desc="Styling, layout & responsive UI">
+                <div class="node-inner">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
+                        width="28" height="28">
+                    <span>CSS</span>
+                </div>
+                <div class="node-tooltip">CSS — 85% · Styling</div>
+            </div>
+
+            <div class="skill-node sn-3" data-skill="JavaScript" data-level="75%"
+                data-desc="Core logic, DOM & async programming">
+                <div class="node-inner">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JavaScript" width="26" height="26">
+                    <span>JS</span>
+                </div>
+                <div class="node-tooltip">JavaScript — 75% · Core Logic</div>
+            </div>
+
+            <div class="skill-node sn-4" data-skill="SQL" data-level="80%" data-desc="Queries & relational databases">
+                <div class="node-inner">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                        alt="SQL" width="28" height="28">
+                    <span>SQL</span>
+                </div>
+                <div class="node-tooltip">SQL — 80% · Databases</div>
+            </div>
+
+            <div class="skill-node sn-5" data-skill="Git" data-level="85%" data-desc="Version control & collaboration">
+                <div class="node-inner">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                        width="28" height="28">
+                    <span>Git</span>
+                </div>
+                <div class="node-tooltip">Git/GitHub — 85% · Version Control</div>
+            </div>
+
+            <div class="skill-node sn-6" data-skill="OpenCV" data-level="75%" data-desc="Computer vision & AI">
+                <div class="node-inner">
+                    <i class="fa-solid fa-eye" style="font-size:22px;color:#5C3EE8"></i>
+                    <span>OpenCV</span>
+                </div>
+                <div class="node-tooltip">OpenCV — 75% · Computer Vision</div>
+            </div>
+
+            <div class="skill-node sn-7" data-skill="React" data-level="80%"
+                data-desc="Component UI & state management">
+                <div class="node-inner">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+                        width="26" height="26">
+                    <span>React</span>
+                </div>
+                <div class="node-tooltip">React — 80% · Frontend UI</div>
+            </div>
+
+            <div class="skill-node sn-8" data-skill="Node.js" data-level="75%"
+                data-desc="Server-side runtime & REST APIs">
+                <div class="node-inner">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                        alt="Node.js" width="26" height="26">
+                    <span>Node.js</span>
+                </div>
+                <div class="node-tooltip">Node.js — 75% · Backend Runtime</div>
+            </div>
+
+            <div class="skill-node sn-9" data-skill="MongoDB" data-level="70%" data-desc="NoSQL document database">
+                <div class="node-inner">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                        alt="MongoDB" width="26" height="26">
+                    <span>MongoDB</span>
+                </div>
+                <div class="node-tooltip">MongoDB — 70% · NoSQL Database</div>
+            </div>
+
+            <div class="skill-node sn-10" data-skill="Tailwind CSS" data-level="80%"
+                data-desc="Utility-first CSS framework">
+                <div class="node-inner">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                        alt="Tailwind CSS" width="26" height="26">
+                    <span>Tailwind</span>
+                </div>
+                <div class="node-tooltip">Tailwind CSS — 80% · Styling Framework</div>
+            </div>
+        </div>
+
+        <!-- Skills grid fallback / supplementary list -->
+        <div class="skills-chips-row reveal-up" style="--delay:0.2s">
+            <span class="skill-chip"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="16"
+                    height="16" alt=""> HTML</span>
+            <span class="skill-chip"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="16"
+                    height="16" alt=""> CSS</span>
+            <span class="skill-chip"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    width="16" height="16" alt=""> JavaScript</span>
+            <span class="skill-chip"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="16"
+                    height="16" alt=""> React</span>
+            <span class="skill-chip"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="16"
+                    height="16" alt=""> Node.js</span>
+            <span class="skill-chip"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="16"
+                    height="16" alt=""> MongoDB</span>
+            <span class="skill-chip"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                    width="16" height="16" alt=""> Tailwind CSS</span>
+            <span class="skill-chip"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                    width="16" height="16" alt=""> SQL</span>
+            <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                    width="16" height="16" alt=""> Git</span>
+            <span class="skill-chip"><i class="fa-solid fa-eye" style="color:#5C3EE8"></i> OpenCV</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+             PROJECTS SECTION
+        ═══════════════════════════════════════ -->
+    <section id="projects" class="section projects-section">
+        <div class="section-eyebrow reveal-up">Portfolio</div>
+        <h2 class="section-title reveal-up">Featured <span class="title-accent">Projects</span></h2>
+
+                <!-- Filter buttons -->
+        <div class="project-filters reveal-up" style="--delay:0.1s">
+            <button class="filter-pill active" data-filter="all" id="filter-all">All</button>
+            <button class="filter-pill" data-filter="frontend">Frontend</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+
+            <!-- Project 1: Journey to India -->
+            <div class="project-card reveal-up tilt-card" data-tags="frontend" style="--delay:0.1s">
+                <div class="project-card-image-wrap">
+                    <img src="images/journey to india.png" alt="Journey to India" class="project-card-img" loading="lazy">
+                    <div class="project-image-overlay"></div>
+                    <span class="project-live-badge"><span class="pulse-dot"></span> LIVE</span>
+                </div>
+                <div class="project-card-body">
+                    <div class="project-card-tags">
+                        <span class="ptag">HTML</span>
+                        <span class="ptag">CSS</span>
+                        <span class="ptag">JavaScript</span>
+                    </div>
+                    <h3 class="project-card-title">Journey to India</h3>
+<p class="project-card-desc">A modern travel website showcasing destinations, experiences, and travel information across India with a beautiful UI.</p>
+                    <div class="project-card-actions">
+                        <a href="https://journey-to-india.netlify.app" target="_blank" class="proj-btn proj-btn-primary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
+                        <button class="proj-btn proj-btn-ghost" onclick="window.openJourneyCaseStudy && window.openJourneyCaseStudy()">
+                            <i class="fa-solid fa-circle-info"></i> Details
+                        </button>
+                        <a href="https://github.com/kachraarman044/Collage_project1" target="_blank" class="proj-btn proj-btn-ghost">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Gaming Website -->
+            <div class="project-card reveal-up tilt-card" data-tags="frontend" style="--delay:0.15s">
+                <div class="project-card-image-wrap">
+                    <img src="images/gamming website.png" alt="Gaming Website" class="project-card-img" loading="lazy">
+                    <div class="project-image-overlay"></div>
+                    <span class="project-live-badge"><span class="pulse-dot"></span> LIVE</span>
+                </div>
+                <div class="project-card-body">
+                    <div class="project-card-tags">
+                        <span class="ptag">HTML</span>
+                        <span class="ptag">CSS</span>
+                        <span class="ptag">JavaScript</span>
+                    </div>
+                    <h3 class="project-card-title">Gaming Website</h3>
+<p class="project-card-desc">An interactive gaming platform featuring game-related content, settings, and a modern gaming interface with immersive UI.</p>
+                    <div class="project-card-actions">
+                        <a href="https://gamming-websit.netlify.app" target="_blank" class="proj-btn proj-btn-primary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
+                        <button class="proj-btn proj-btn-ghost" onclick="window.openGamingCaseStudy && window.openGamingCaseStudy()">
+                            <i class="fa-solid fa-circle-info"></i> Details
+                        </button>
+                        <a href="https://github.com/kachraarman044/Gaming_web" target="_blank" class="proj-btn proj-btn-ghost">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Hotel Website -->
+            <div class="project-card reveal-up tilt-card" data-tags="frontend" style="--delay:0.2s">
+                <div class="project-card-image-wrap">
+                    <img src="images/hotal website.png" alt="Hotel Website" class="project-card-img" loading="lazy">
+                    <div class="project-image-overlay"></div>
+                    <span class="project-live-badge"><span class="pulse-dot"></span> LIVE</span>
+                </div>
+                <div class="project-card-body">
+                    <div class="project-card-tags">
+                        <span class="ptag">HTML</span>
+                        <span class="ptag">CSS</span>
+                        <span class="ptag">JavaScript</span>
+                    </div>
+                    <h3 class="project-card-title">Hotel Website</h3>
+<p class="project-card-desc">A responsive hotel booking website with modern UI design, interactive booking flow, and optimized mobile experience.</p>
+                    <div class="project-card-actions">
+                        <a href="https://hotal-website.netlify.app" target="_blank" class="proj-btn proj-btn-primary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
+                        <button class="proj-btn proj-btn-ghost" onclick="window.openHotelCaseStudy && window.openHotelCaseStudy()">
+                            <i class="fa-solid fa-circle-info"></i> Details
+                        </button>
+                        <a href="https://github.com/kachraarman044/Hotel_Five_Project1" target="_blank" class="proj-btn proj-btn-ghost">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        
+            <!-- Project 4: Face Detection Door Security System -->
+            <div class="project-card reveal-up tilt-card" data-tags="frontend" style="--delay:0.25s">
+                <div class="project-card-image-wrap">
+                    <img src="images/door security sytem.png" alt="Face Detection Door Security System" class="project-card-img" loading="lazy">
+                    <div class="project-image-overlay"></div>
+                    <span class="project-live-badge"><span class="pulse-dot"></span> LIVE</span>
+                </div>
+                <div class="project-card-body">
+                    <div class="project-card-tags">
+                        <span class="ptag">Python</span>
+                        <span class="ptag">OpenCV</span>
+                        <span class="ptag">Tkinter</span>
+                    </div>
+                    <h3 class="project-card-title">Face Detection Door Security System</h3>
+                    <p class="project-card-desc">A smart desktop GUI application that simulates a face recognition door lock — register a face, scan it, and the door opens for authorized users with a welcome voice; access denied for unknown faces.</p>
+                    <div class="project-card-actions">
+                        <a href="https://face-recognitaion.onrender.com/" target="_blank" class="proj-btn proj-btn-primary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
+                        <button class="proj-btn proj-btn-ghost" onclick="window.openDoorCaseStudy && window.openDoorCaseStudy()">
+                            <i class="fa-solid fa-circle-info"></i> Details
+                        </button>
+                        <a href="https://github.com/kachraarman044/Face--Recognitaion/tree/main" target="_blank" class="proj-btn proj-btn-ghost">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ═══════════════════════════════════════
+             DEVELOPER DASHBOARD
+        ═══════════════════════════════════════ -->
+    <section id="dashboard" class="section dashboard-section">
+        <div class="section-eyebrow reveal-up">Overview</div>
+        <h2 class="section-title reveal-up">Developer <span class="title-accent">Dashboard</span></h2>
+
+        <div class="dashboard-grid">
+            <!-- Stat cards -->
+            <div class="dash-stat-card glass-card reveal-up" style="--delay:0.1s">
+                <div class="dash-stat-icon" style="--c:#3776AB"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="dash-stat-num stat-num" data-count="4">0</div>
+                <div class="dash-stat-label">Projects Built</div>
+            </div>
+
+            <div class="dash-stat-card glass-card reveal-up" style="--delay:0.15s">
+                <div class="dash-stat-icon" style="--c:#FFD43B"><i class="fa-solid fa-microchip"></i></div>
+                <div class="dash-stat-num stat-num" data-count="9">0</div>
+                <div class="dash-stat-label">Technologies</div>
+            </div>
+
+            <div class="dash-stat-card glass-card reveal-up" style="--delay:0.2s">
+                <div class="dash-stat-icon" style="--c:#4CAF50"><i class="fa-solid fa-award"></i></div>
+                <div class="dash-stat-num stat-num" data-count="1">0</div>
+                <div class="dash-stat-label">Certifications</div>
+            </div>
+
+            <div class="dash-stat-card glass-card reveal-up" style="--delay:0.25s">
+                <div class="dash-stat-icon" style="--c:#9C27B0"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="dash-stat-num" style="font-size:2rem;font-weight:800;color:#111827">BCA</div>
+                <div class="dash-stat-label">Degree</div>
+            </div>
+
+            <!-- Current Focus card -->
+            <div class="dash-focus-card glass-card reveal-up" style="--delay:0.3s">
+                <div class="dash-card-header">
+                    <span class="dash-card-dot" style="background:#4CAF50"></span>
+                    <span>Current Focus</span>
+                </div>
+                <div class="dash-focus-list">
+                    <div class="focus-item"><i class="fa-solid fa-arrow-right" style="color:#3776AB"></i>
+                        Cyber security</div>
+                    <div class="focus-item"><i class="fa-solid fa-arrow-right" style="color:#3776AB"></i>
+                        AI/ML</div>
+                    <div class="focus-item"><i class="fa-solid fa-arrow-right" style="color:#3776AB"></i> Prompt
+                        Engineer</div>
+                    <div class="focus-item"><i class="fa-solid fa-arrow-right" style="color:#3776AB"></i> MongoDB
+                        & Node js</div>
+                </div>
+            </div>
+
+            <!-- GitHub Activity -->
+            <div class="dash-github-card glass-card reveal-up" style="--delay:0.35s">
+                <div class="dash-card-header">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub — @kachraarman044</span>
+                </div>
+                <!-- GitHub Profile Photo -->
+                <div class="dash-github-profile">
+                    <a href="https://github.com/kachraarman044" target="_blank" class="dash-github-avatar-link">
+                        <img src="images/arman.png" alt="Arman GitHub Avatar" class="dash-github-avatar" loading="lazy"
+                            onerror="this.style.display='none'">
+                    </a>
+                    <div class="dash-github-meta">
+                        <span class="dash-github-name">Kachara Arman</span>
+                        <span class="dash-github-handle">@kachraarman044</span>
+                    </div>
+                </div>
+                <div class="github-lang-bars">
+                    <div class="glb-item">
+                        <span>React</span>
+                        <div class="glb-bar">
+                            <div class="glb-fill" style="--w:72%;background:#3572A5"></div>
+                        </div>
+                        <span>72%</span>
+                    </div>
+                    <div class="glb-item">
+                        <span>Python</span>
+                        <div class="glb-bar">
+                            <div class="glb-fill" style="--w:16%;background:#f1e05a"></div>
+                        </div>
+                        <span>16%</span>
+                    </div>
+                    <div class="glb-item">
+                        <span>HTML/CSS</span>
+                        <div class="glb-bar">
+                            <div class="glb-fill" style="--w:69%;background:#e34c26"></div>
+                        </div>
+                        <span>69%</span>
+                    </div>
+                </div>
+                <a href="https://github.com/kachraarman044" target="_blank" class="dash-github-link">
+                    <i class="fab fa-github"></i> View Profile
+                </a>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="dash-stack-card glass-card reveal-up" style="--delay:0.4s">
+                <div class="dash-card-header">
+                    <i class="fa-solid fa-layer-group" style="color:#3776AB"></i>
+                    <span>Technical Stack</span>
+                </div>
+                <div class="stack-chips">
+                    <span class="stack-chip python">React</span>
+                    <span class="stack-chip django">Node JS</span>
+                    <span class="stack-chip fastapi">Express js</span>
+                    <span class="stack-chip">REST API</span>
+                    <span class="stack-chip">Tailwind css</span>
+                    <span class="stack-chip">OpenCV</span>
+                    <span class="stack-chip">Git</span>
+                    <span class="stack-chip">JavaScript</span>
+                    <span class="stack-chip">HTML/CSS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+             EXPERIENCE SECTION
+        ═══════════════════════════════════════ -->
+    <section id="experience" class="section experience-section">
+        <div class="section-eyebrow reveal-up">Journey</div>
+        <h2 class="section-title reveal-up">Professional <span class="title-accent">Experience</span></h2>
+
+        <div class="timeline">
+            <div class="timeline-track"></div>
+
+            <div class="timeline-item reveal-up" style="--delay:0.1s">
+                <div class="timeline-dot">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="timeline-content glass-card">
+                    <div class="timeline-header">
+                        <span class="timeline-period">2024 — Present</span>
+                        <span class="timeline-type freelance">Freelance</span>
+                    </div>
+                    <h3 class="timeline-role">MERN StackDeveloper</h3>
+                    <h4 class="timeline-org">Freelance &amp; Projects</h4>
+                    <p class="timeline-desc">Developing real-world applications including Gamming website,
+                        Hotel Booking Websites, and Face detection. Handling end-to-end development from
+                        database design to API deployment.</p>
+                    <div class="timeline-tech">
+                        <span>React js</span><span>Node js</span><span>Express js</span><span>REST
+                            API</span><span>Tailwind css</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal-up" style="--delay:0.2s">
+                <div class="timeline-dot">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content glass-card">
+                    <div class="timeline-header">
+                        <span class="timeline-period">2024 — 2027</span>
+                        <span class="timeline-type academic">Academic</span>
+                    </div>
+                    <h3 class="timeline-role">BCA Bachelor computer application</h3>
+                    <h4 class="timeline-org">Noble University, Junagadh</h4>
+                    <p class="timeline-desc">Focusing on advanced computing concepts, relational databases (SQL,
+                        SQLite3), and practical application of Computer Vision for attendance and security
+                        systems. CGPA: 7.05</p>
+                    <div class="timeline-tech">
+                        <span>Data
+                            Structures</span><span>DBMS</span><span>Networking</span><span>AI/ML</span><span>Web
+                            Dev</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+             EDUCATION SECTION
+        ═══════════════════════════════════════ -->
+    <section id="education" class="section education-section">
+        <div class="section-eyebrow reveal-up">Academic</div>
+        <h2 class="section-title reveal-up">Education <span class="title-accent">&amp; Qualifications</span></h2>
+
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <!-- 01: BCA (Undergraduate - Pursuing) -->
+            <div class="timeline-item reveal-up" style="--delay:0.1s; --theme-color: #3B82F6;">
+                <div class="timeline-node">01</div>
+                <div class="edu-card glass-card">
+                    <div class="edu-card-left">
+                        <div class="edu-card-badge blue">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <div class="badge-time"><i class="fa-solid fa-circle-check"></i></div>
+                        </div>
+                        <div class="edu-card-year">2024 — 2027</div>
+                        <div class="edu-status-badge completed">Undergraduate</div>
+                        <div class="edu-label">Graduation</div>
+                    </div>
+                    <div class="edu-card-middle">
+                        <div class="top-badge-row">
+                            <h3 class="edu-card-degree">Bachelor of Computer Application (BCA)</h3>
+                            <div class="top-status-badge green"><i class="fa-solid fa-spinner"></i> Undergraduate
+                            </div>
+                        </div>
+                        <div class="edu-card-school">Noble University, Junagadh</div>
+                        <p class="edu-desc">Focused on software development, programming, data structures, database
+                            systems, and emerging technologies.</p>
+
+                        <div class="edu-details-row">
+                            <div class="detail-item"><i class="fa-regular fa-calendar"></i>
+                                <div><span>Duration</span><strong>3 Years</strong></div>
+                            </div>
+                            <div class="detail-item"><i class="fa-solid fa-award"></i>
+                                <div><span>Result</span><strong>7.05 CGPA</strong></div>
+                            </div>
+                            <div class="detail-item"><i class="fa-solid fa-spinner" style="color:var(--edu-blue)"></i>
+                                <div><span>Status</span><strong>Pursuing</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="edu-card-right">
+                        <!-- Semester Performance Graph -->
+                        <div class="cgpa-graph-container">
+                            <h4 class="cgpa-graph-title">Semester Performance</h4>
+                            <div class="cgpa-graph">
+                                <div class="cgpa-bar-wrap">
+                                    <div class="cgpa-value">7.32</div>
+                                    <div class="cgpa-bar">
+                                        <div class="cgpa-fill" style="height: 73.2%;"></div>
+                                    </div>
+                                    <div class="cgpa-label">Sem-1</div>
+                                </div>
+                                <div class="cgpa-bar-wrap">
+                                    <div class="cgpa-value">6.64</div>
+                                    <div class="cgpa-bar">
+                                        <div class="cgpa-fill" style="height: 66.4%;"></div>
+                                    </div>
+                                    <div class="cgpa-label">Sem-2</div>
+                                </div>
+                                <div class="cgpa-bar-wrap">
+                                    <div class="cgpa-value">6.67</div>
+                                    <div class="cgpa-bar">
+                                        <div class="cgpa-fill" style="height: 66.7%;"></div>
+                                    </div>
+                                    <div class="cgpa-label">Sem-3</div>
+                                </div>
+                                <div class="cgpa-bar-wrap">
+                                    <div class="cgpa-value">7.84</div>
+                                    <div class="cgpa-bar">
+                                        <div class="cgpa-fill" style="height: 78.4%;"></div>
+                                    </div>
+                                    <div class="cgpa-label">Sem-4</div>
+                                </div>
+                                <div class="cgpa-bar-wrap">
+                                    <div class="cgpa-value">6.78</div>
+                                    <div class="cgpa-bar">
+                                        <div class="cgpa-fill" style="height: 67.8%;"></div>
+                                    </div>
+                                    <div class="cgpa-label">Sem-5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02: HSC / 12th Board (Completed) -->
+            <div class="timeline-item reveal-up" style="--delay:0.2s; --theme-color: #F59E0B;">
+                <div class="timeline-node">02</div>
+                <div class="edu-card glass-card">
+                    <div class="edu-card-left">
+                        <div class="edu-card-badge orange">
+                            <i class="fa-solid fa-book-open"></i>
+                            <div class="badge-time"><i class="fa-solid fa-circle-check"></i></div>
+                        </div>
+                        <div class="edu-card-year">2024</div>
+                        <div class="edu-status-badge completed">COMPLETED</div>
+                        <div class="edu-label">Higher Secondary</div>
+                    </div>
+                    <div class="edu-card-middle">
+                        <h3 class="edu-card-degree">Higher Secondary (HSC)</h3>
+                        <div class="edu-card-school">Commerce Stream — GSEB</div>
+                        <p class="edu-desc">Commerce with Mathematics</p>
+
+                        <div class="edu-details-row">
+                            <div class="detail-item"><i class="fa-solid fa-award" style="color:var(--edu-orange)"></i>
+                                <div><span>Board</span><strong>GSEB</strong></div>
+                            </div>
+                            <div class="detail-item"><i class="fa-regular fa-calendar"></i>
+                                <div><span>Year</span><strong>2024</strong></div>
+                            </div>
+                            <div class="detail-item"><i class="fa-solid fa-file-lines"></i>
+                                <div><span>Result</span><strong>62.84%</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edu-card-right">
+                        <div class="score-display">
+                            <div class="score-circle orange">
+                                <div class="score-text">
+                                    <span class="num">62.84<span class="pct">%</span></span>
+                                    <span class="lbl">Percentage</span>
+                                </div>
+                            </div>
+                            <div class="score-graph">
+                                <div class="graph-header">Performance Trend <span class="tag orange">Great
+                                        Performance! <i class="fa-solid fa-star"></i></span></div>
+                                <!-- A decorative SVG line graph -->
+                                <svg viewBox="0 0 200 60" class="trend-line orange">
+                                    <path d="M10,40 Q30,20 50,30 T90,50 T130,20 T170,10 T190,20" fill="none"
+                                        stroke="var(--edu-orange)" stroke-width="2" />
+                                    <circle cx="10" cy="40" r="3" fill="var(--edu-orange)" />
+                                    <circle cx="50" cy="30" r="3" fill="var(--edu-orange)" />
+                                    <circle cx="90" cy="50" r="3" fill="var(--edu-orange)" />
+                                    <circle cx="130" cy="20" r="3" fill="var(--edu-orange)" />
+                                    <circle cx="170" cy="10" r="3" fill="var(--edu-orange)" />
+                                    <circle cx="190" cy="20" r="3" fill="var(--edu-orange)" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03: SSC / 10th Board (Completed) -->
+            <div class="timeline-item reveal-up" style="--delay:0.3s; --theme-color: #10B981;">
+                <div class="timeline-node">03</div>
+                <div class="edu-card glass-card">
+                    <div class="edu-card-left">
+                        <div class="edu-card-badge green">
+                            <i class="fa-solid fa-file-contract"></i>
+                            <div class="badge-time"><i class="fa-solid fa-circle-check"></i></div>
+                        </div>
+                        <div class="edu-card-year">2022</div>
+                        <div class="edu-status-badge completed">COMPLETED</div>
+                        <div class="edu-label">Secondary School</div>
+                    </div>
+                    <div class="edu-card-middle">
+                        <h3 class="edu-card-degree">Secondary School Certificate (SSC)</h3>
+                        <div class="edu-card-school">Gujarat Secondary Education Board (GSEB)</div>
+                        <p class="edu-desc">Completed secondary education with strong academic foundation.</p>
+
+                        <div class="edu-details-row">
+                            <div class="detail-item"><i class="fa-solid fa-award" style="color:var(--edu-green)"></i>
+                                <div><span>Board</span><strong>GSEB</strong></div>
+                            </div>
+                            <div class="detail-item"><i class="fa-regular fa-calendar"></i>
+                                <div><span>Year</span><strong>2022</strong></div>
+                            </div>
+                            <div class="detail-item"><i class="fa-solid fa-file-lines"></i>
+                                <div><span>Result</span><strong>60.84%</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edu-card-right">
+                        <div class="score-display">
+                            <div class="score-circle green">
+                                <div class="score-text">
+                                    <span class="num">60.84<span class="pct">%</span></span>
+                                    <span class="lbl">Percentage</span>
+                                </div>
+                            </div>
+                            <div class="score-graph">
+                                <div class="graph-header">Performance Trend <span class="tag green">Keep Growing! <i
+                                            class="fa-solid fa-seedling"></i></span></div>
+                                <svg viewBox="0 0 200 60" class="trend-line green">
+                                    <path d="M10,50 Q40,30 70,40 T130,20 T160,30 T190,10" fill="none"
+                                        stroke="var(--edu-green)" stroke-width="2" />
+                                    <circle cx="10" cy="50" r="3" fill="var(--edu-green)" />
+                                    <circle cx="70" cy="40" r="3" fill="var(--edu-green)" />
+                                    <circle cx="130" cy="20" r="3" fill="var(--edu-green)" />
+                                    <circle cx="160" cy="30" r="3" fill="var(--edu-green)" />
+                                    <circle cx="190" cy="10" r="3" fill="var(--edu-green)" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Academic Summary Footer -->
+        <div class="academic-summary reveal-up glass-card" style="--delay:0.5s">
+            <div class="summary-item">
+                <div class="sum-icon blue"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="sum-text">
+                    <strong>1 <span>Degree</span></strong>
+                    <span class="purple-text">BCA — Pursuing</span>
+                </div>
+            </div>
+            <div class="summary-item">
+                <div class="sum-icon orange"><i class="fa-solid fa-file-contract"></i></div>
+                <div class="sum-text">
+                    <strong>3 <span>Academic Levels</span></strong>
+                    <span>10th, 12th, Graduation</span>
+                </div>
+            </div>
+            <div class="summary-item">
+                <div class="sum-icon blue"><i class="fa-solid fa-book-open"></i></div>
+                <div class="sum-text">
+                    <strong>Undergraduate</strong>
+                    <span>Noble University, Junagadh</span>
+                    <span>5 Semesters Completed</span>
+                </div>
+            </div>
+            <div class="summary-item">
+                <div class="sum-icon green"><i class="fa-solid fa-bullseye"></i></div>
+                <div class="sum-text">
+                    <strong>Focused Goals</strong>
+                    <span>Continuous learning</span>
+                    <span>and skill development</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="academic-footer-msg reveal-up" style="--delay:0.6s">
+            <p><i class="fa-solid fa-star"></i> Continuing the journey of learning, growing, and achieving
+                excellence. <i class="fa-solid fa-heart" style="color:var(--edu-purple)"></i></p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+             CERTIFICATES SECTION
+        ═══════════════════════════════════════ -->
+    <section id="certificates" class="section certificates-section">
+        <div class="section-eyebrow reveal-up">Credentials</div>
+        <h2 class="section-title reveal-up">Certifications <span class="title-accent">&amp; Achievements</span></h2>
+
+        <!-- Filter -->
+        <div class="cert-filters reveal-up" style="--delay:0.1s">
+            <button class="filter-pill active" data-cert-filter="all">All</button>
+            <button class="filter-pill" data-cert-filter="nielit">NIELIT</button>
+        </div>
+
+        <div class="cert-grid" id="certGrid">
+
+            <!-- Certificate: CCC -->
+            <div class="cert-card glass-card reveal-up" data-cert-tags="nielit" style="--delay:0.1s">
+                <div class="cert-img-wrap">
+                    <img src="images/certificates/ccc.png" alt="CCC Certificate" loading="lazy">
+                    <div class="cert-img-overlay"></div>
+                </div>
+                <div class="cert-card-body">
+                    <div class="cert-issuer-row">
+                        <span class="cert-org">NIELIT</span>
+                        <span class="cert-badge nasscom">NIELIT</span>
+                    </div>
+                    <h3 class="cert-name">CCC — Course on Computer Concepts</h3>
+                    <div class="cert-tags-row"><span>Computer Concepts</span><span>NIELIT</span></div>
+                    <a href="images/certificates/ccc.png" target="_blank" class="cert-view-btn">
+                        <i class="fa-solid fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="section contact-section">
+        <div class="contact-cta-wrap reveal-up">
+            <div class="contact-cta-badge">Let's Connect</div>
+            <h2 class="contact-cta-title" data-i18n-html="contactTitle">Let's Build Something <span
+                    class="title-accent">Great Together.</span>
+            </h2>
+            <p class="contact-cta-sub" data-i18n-html="contactSub">Have a project, opportunity, or collaboration in
+                mind? Let's connect.</p>
+            <div class="contact-quick-links">
+                <a href="mailto:kachraarman83@gmail.com" class="contact-quick-btn">
+                    <i class="fa-solid fa-envelope"></i> Email Me
+                </a>
+                <a href="https://wa.me/918849595114" target="_blank" class="contact-quick-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.linkedin.com/in/arman-kachra-921a9a39b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="contact-quick-btn linkedin">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="https://github.com/kachraarman044" target="_blank" class="contact-quick-btn github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-main-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-card glass-card reveal-up" style="--delay:0.1s">
+                <h3 class="contact-form-title">Send a Message</h3>
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-field">
+                        <label for="contact-name">Your Name</label>
+                        <input id="contact-name" name="name" type="text" placeholder="Kachara Arman" required
+                            autocomplete="name">
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-email">Email Address</label>
+                        <input id="contact-email" name="email" type="email" placeholder="hello@example.com" required
+                            autocomplete="email">
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-number">Phone (Optional)</label>
+                        <input id="contact-number" name="number" type="tel" placeholder="+91 98765 43210"
+                            autocomplete="tel">
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-subject">Subject</label>
+                        <input id="contact-subject" name="subject" type="text"
+                            placeholder="Project inquiry / Collaboration">
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="5"
+                            placeholder="Tell me about your project or opportunity..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary-pill full-w" id="contactSubmitBtn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                    <span id="formStatus" class="form-status" aria-live="polite"></span>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info-col reveal-up" style="--delay:0.2s">
+                <div class="contact-info-card glass-card">
+                    <a href="mailto:kachraarman83@gmail.com" class="contact-info-item">
+                        <div class="contact-info-icon" style="--c:#3776AB"><i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="contact-info-label">Email</div>
+                            <div class="contact-info-value">kachraarman83@gmail.com</div>
+                        </div>
+                    </a>
+                    <a href="tel:+918849595114" class="contact-info-item">
+                        <div class="contact-info-icon" style="--c:#4CAF50"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <div class="contact-info-label">Phone</div>
+                            <div class="contact-info-value">+91 8849595114</div>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/B167LYB5MMnmZZpU7" target="_blank" class="contact-info-item">
+                        <div class="contact-info-icon" style="--c:#FF5722"><i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <div class="contact-info-label">Location</div>
+                            <div class="contact-info-value">Bhesan, Junagadh, Gujarat</div>
+                        </div>
+                    </a>
+                    <div class="contact-map"
+                        style="border-radius: 12px; overflow: hidden; display: flex; width: 100%; height: 200px; margin-top: 10px;">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Bhesan,%20Junagadh,%20Gujarat&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Notice Banner -->
+                <div class="contact-notice glass-card">
+                    <div class="notice-icon-wrap"><i class="fa-solid fa-check-circle"></i></div>
+                    <div>
+                        <p class="notice-title"><i class="fa-solid fa-paper-plane"></i> All messages are
+                            automatically redirected to:</p>
+                        <p class="notice-detail"><strong>Email:</strong> kachraarman83@gmail.com</p>
+                        <p class="notice-detail"><strong>Phone:</strong> +91 8849595114</p>
+                        <p class="notice-sub">Every submission triggers instant notifications via email and SMS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+             FOOTER
+        ═══════════════════════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">⟨/⟩ Kachara Arman</span>
+                <span class="footer-tagline">Full Stack Developer</span>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/kachraarman044" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/arman-kachra-921a9a39b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:kachraarman83@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 Kachara Arman. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <!-- ═══════════════════════════════════════
+         PROJECT CASE STUDY MODAL
+    ═══════════════════════════════════════ -->
+    <div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-container glass-card">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <span class="modal-category" id="modalCategory">Python / Django / OpenCV</span>
+                <h2 id="modalTitle" class="modal-title">Project Title</h2>
+                <div class="modal-links">
+                    <a href="#" id="modalLiveLink" target="_blank" class="proj-btn proj-btn-primary">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                    <a href="#" id="modalCodeLink" target="_blank" class="proj-btn proj-btn-ghost">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+            <div class="modal-body-grid">
+                <div class="modal-body-left">
+                    <h3>Overview</h3>
+                    <p id="modalDesc">Detailed description goes here...</p>
+                    <h3>Key Features</h3>
+                    <ul id="modalFeatures" class="modal-features-list"></ul>
+                </div>
+                <div class="modal-body-right">
+                    <div class="modal-arch-card glass-card">
+                        <h4><i class="fa-solid fa-network-wired"></i> Architecture</h4>
+                        <p id="modalArchitecture">System architecture details...</p>
+                    </div>
+                    <div class="modal-stack-card glass-card">
+                        <h4>Tech Stack</h4>
+                        <div id="modalTags" class="modal-tags-row"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Success Modal -->
+    <div id="contactSuccessModal" class="modal-overlay" role="dialog" aria-modal="true">
+        <div class="success-modal glass-card">
+            <div class="success-icon-wrap">
+                <div class="success-checkmark">
+                    <svg viewBox="0 0 52 52">
+                        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </div>
+            </div>
+            <h2>Message Sent Successfully!</h2>
+            <p>Thank you for reaching out. Arman will get back to you shortly.</p>
+            <button class="btn-primary-pill" id="successCloseBtn">Close</button>
+        </div>
+    </div>
+
+    <!-- Recruiter Mode Overlay -->
+    <div id="recruiterOverlay" class="recruiter-overlay" role="dialog" aria-modal="true" aria-label="Recruiter Mode"
+        hidden>
+        <div class="recruiter-panel">
+            <button class="recruiter-close" id="recruiterClose" aria-label="Close Recruiter Mode">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="recruiter-header">
+                <div class="recruiter-avatar">
+                    <img src="images/arman.png" alt="Kachara Arman">
+                </div>
+                <div>
+                    <div class="recruiter-badge"><i class="fa-solid fa-briefcase"></i> Recruiter Mode</div>
+                    <h2>Kachara Arman</h2>
+                    <p class="recruiter-role" data-i18n-html="recruiterRole">Full Stack Developer · BCA · Gujarat,
+                        India</p>
+                </div>
+            </div>
+
+            <div class="recruiter-grid">
+                <div class="recruiter-block">
+                    <h3><i class="fa-solid fa-code"></i> Core Skills</h3>
+                    <div class="recruiter-chips">
+                        <span class="rc-chip">HTML / CSS</span>
+                        <span class="rc-chip">React</span>
+                        <span class="rc-chip">Tailwind CSS</span>
+                        <span class="rc-chip">Bootstrap</span>
+                        <span class="rc-chip">Node.js</span>
+                        <span class="rc-chip">Express.js</span>
+                        <span class="rc-chip">MongoDB</span>
+                        <span class="rc-chip">SQL</span>
+                        <span class="rc-chip">Git / GitHub</span>
+                    </div>
+                </div>
+
+                <div class="recruiter-block">
+                    <h3><i class="fa-solid fa-laptop-code"></i> Best Projects</h3>
+                    <ul class="recruiter-projects-list">
+                        <li><i class="fa-solid fa-circle" style="color:#3776AB;font-size:8px"></i> <strong>Journey to India</strong> — HTML, CSS, JavaScript, PHP</li>
+                        <li><i class="fa-solid fa-circle" style="color:#3776AB;font-size:8px"></i> <strong>Gaming Website</strong> — HTML, CSS, JavaScript</li>
+                        <li><i class="fa-solid fa-circle" style="color:#3776AB;font-size:8px"></i> <strong>Hotel Website</strong> — HTML, CSS, JavaScript, PHP</li>
+                        <li><i class="fa-solid fa-circle" style="color:#3776AB;font-size:8px"></i> <strong>Face Detection Door Security</strong> — Python, OpenCV</li>
+                    </ul>
+                </div>
+
+                <div class="recruiter-block">
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                    <p><strong>Bachelor of Computer Applications (BCA)</strong><br>Noble University, Junagadh<br>Computer Science &amp; Web Technologies</p>
+                </div>
+
+                <div class="recruiter-block">
+                    <h3><i class="fa-solid fa-award"></i> Certifications</h3>
+                    <p>CCC — Course on Computer Concepts (NIELIT)</p>
+                </div>
+            </div>
+
+            <div class="recruiter-contact">
+                <a href="resume/arman resume.pdf" class="btn-primary-pill" download>
+                    <i class="fa-solid fa-download"></i> Download Resume
+                </a>
+                <a href="mailto:kachraarman83@gmail.com" class="btn-glass-pill">
+                    <i class="fa-solid fa-envelope"></i> kachraarman83@gmail.com
+                </a>
+                <a href="https://github.com/kachraarman044" target="_blank" class="btn-glass-pill">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/arman-kachra-921a9a39b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="btn-glass-pill">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="ai-agent-widget.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+# Netlify Ignore File
+# Do not deploy the Python AI backend (Vercel/Netlify use the JS API routes instead)
+ai-agent/backend/venv
+ai-agent/backend/__pycache__
+ai-agent/backend/.env
+*.pyc
+.git
+.gitignore
+README.md
+node_modules
+.vscode
+vercel.json
+.env
+.env.example

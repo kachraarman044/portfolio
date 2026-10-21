@@ -1,0 +1,42 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["pg", "nodemailer", "sqlite3"]
+
+[[redirects]]
+  from = "/submit-contact"
+  to = "/.netlify/functions/contact"
+  status = 200
+
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/login"
+  to = "/.netlify/functions/admin-login"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/contacts"
+  to = "/.netlify/functions/admin-contacts"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/contacts/delete"
+  to = "/.netlify/functions/admin-contacts-delete"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/contacts/clear"
+  to = "/.netlify/functions/admin-contacts-clear"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

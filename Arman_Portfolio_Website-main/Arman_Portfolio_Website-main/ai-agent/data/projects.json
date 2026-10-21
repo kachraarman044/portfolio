@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Journey to India",
+        "description": "A modern travel website showcasing destinations, experiences, and travel information across India.",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "live_demo": "https://journey-to-india.netlify.app",
+        "code_link": "https://github.com/kachraarman044/Collage_project1"
+    },
+    {
+        "name": "Gaming Website",
+        "description": "An interactive gaming platform featuring game-related content, settings, and a modern gaming interface.",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "live_demo": "https://gamming-websit.netlify.app",
+        "code_link": "https://github.com/kachraarman044/Gaming_web"
+    },
+    {
+        "name": "Face Detection Door Security System",
+        "description": "A smart security system using face detection technology to identify authorized users and provide secure door access.",
+        "technologies": [
+            "Python",
+            "OpenCV",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "live_demo": "",
+        "code_link": ""
+    }
+]

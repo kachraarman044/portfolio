@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Full Stack Development",
+        "organization": "Self-Directed Projects",
+        "duration": "Present",
+        "description": "Building full stack web applications using HTML, CSS, React, Tailwind CSS, Bootstrap, Node.js, Express.js, MongoDB, and SQL. Developed projects including a travel website, gaming platform, and a face detection security system."
+    },
+    {
+        "title": "Data Analytics",
+        "organization": "Independent Studies",
+        "duration": "Present",
+        "description": "Using SQL and MongoDB to clean, process, and extract meaningful insights from complex datasets."
+    }
+]
